@@ -1,0 +1,9 @@
+2023-08-29 18:40:19.515 [info] 
+
+
+
+
+2023-08-29 18:40:19.568 [info] Extension host agent started.
+2023-08-29 18:40:19.780 [error] [127.0.0.1][4f628a27][ManagementConnection] Unknown reconnection token (never seen).
+2023-08-29 18:40:19.788 [error] [127.0.0.1][d5ec35f9][ExtensionHostConnection] Unknown reconnection token (never seen).
+2023-08-29 18:45:19.569 [info] Last EH closed, shutting down

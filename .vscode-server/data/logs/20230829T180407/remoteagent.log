@@ -1,0 +1,34 @@
+2023-08-29 18:04:07.600 [info] 
+
+
+
+
+2023-08-29 18:04:07.600 [info] Extension host agent started.
+2023-08-29 18:04:07.607 [info] Started initializing default profile extensions in extensions installation folder. file:///u/xsu4ju/.vscode-server/extensions
+2023-08-29 18:04:07.631 [info] Completed initializing default profile extensions in extensions installation folder. file:///u/xsu4ju/.vscode-server/extensions
+2023-08-29 18:04:07.649 [info] [127.0.0.1][7d1d0a8b][ManagementConnection] New connection established.
+2023-08-29 18:04:07.662 [info] [127.0.0.1][30799ad9][ExtensionHostConnection] New connection established.
+2023-08-29 18:04:07.864 [info] [127.0.0.1][30799ad9][ExtensionHostConnection] <3263174> Launched Extension Host Process.
+2023-08-29 18:04:23.372 [info] [127.0.0.1][7d1d0a8b][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-08-29 18:04:23.376 [error] Error: Throttler is disposed
+    at r.queue (/u/xsu4ju/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/vs/server/node/server.main.js:70:13612)
+    at /u/xsu4ju/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/vs/server/node/server.main.js:70:15183
+    at /u/xsu4ju/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/vs/server/node/server.main.js:70:14822
+    at runNextTicks (node:internal/process/task_queues:61:5)
+    at listOnTimeout (node:internal/timers:528:9)
+    at processTimers (node:internal/timers:502:7)
+2023-08-29 18:04:23.416 [info] [127.0.0.1][30799ad9][ExtensionHostConnection] <3263174> Extension Host Process exited with code: 0, signal: null.
+2023-08-29 18:04:23.417 [info] Cancelling previous shutdown timeout
+2023-08-29 18:04:23.418 [info] Last EH closed, waiting before shutting down
+2023-08-29 18:04:24.846 [info] Got delay-shutdown request while in shutdown timeout, delaying
+2023-08-29 18:04:24.846 [info] Cancelling previous shutdown timeout
+2023-08-29 18:04:24.942 [info] [127.0.0.1][4f628a27][ManagementConnection] New connection established.
+2023-08-29 18:04:24.967 [info] [127.0.0.1][d5ec35f9][ExtensionHostConnection] New connection established.
+2023-08-29 18:04:24.982 [info] [127.0.0.1][d5ec35f9][ExtensionHostConnection] <3264397> Launched Extension Host Process.
+2023-08-29 18:09:24.849 [info] New EH opened, aborting shutdown
+2023-08-29 18:10:12.808 [info] [127.0.0.1][d5ec35f9][ExtensionHostConnection] The client has reconnected.
+2023-08-29 18:10:14.476 [info] [127.0.0.1][4f628a27][ManagementConnection] The client has reconnected.
+2023-08-29 18:10:14.519 [info] [127.0.0.1][d5ec35f9][ExtensionHostConnection] The client has reconnected.
+2023-08-29 21:26:41.158 [info] [127.0.0.1][d5ec35f9][ExtensionHostConnection] <3264397> Extension Host Process exited with code: 0, signal: null.
+2023-08-29 21:26:41.159 [info] Last EH closed, waiting before shutting down
+2023-08-29 21:31:41.170 [info] Last EH closed, shutting down
