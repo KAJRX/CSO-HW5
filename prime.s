@@ -47,21 +47,21 @@ gcd:
 	# TO DO: write this function
 
 	xorq	%rax, %rax
- 	cmp $0, $rsi
-  	je .foundation
-
-    	begin:
-     	mov %rsi,%rdi
-      	mov %rdi, %rax
-       	call modulo
-	mov %rdi, %rsi
- 	mov %rdx, %rdi
-  	test %rdx, %rdx
-   	jnz begin
-
-    	.foundation:
-     		mov %rdi, %rax
-       		retq
+ 	cmp %rdi, %rsi
+    	je .same
+    	cmp $0, %rsi
+    	je .done
+    	call modulo
+   	 mov %rdi, %rsi
+    	mov %rax, %rdi
+    	call gcd
+    	ret
+.same:
+    mov %rdi, %rax
+    ret
+.done:
+    mov %rsi, %rax
+    ret
 
 ############################################################
 ##                 end of gcd routine                     ##
@@ -79,26 +79,23 @@ prime:
 	# TO DO: write this function
 
 	xorq	%rax, %rax
- 	mov $1, %rsi
-
-   	loop:
-    	cmp %rsi, %rdi
-     	je .primCheck
-      	push %rdi
-       	push %rsi
-	call gcd
- 	pop %rsi
-  	pop %rdi
-   	inc %rsi
-    	cmp $0x01, %rax
-     	je loop
-
-      	mov $0x00, %rax
-      	retq
-
-       .primCheck:
-       mov $1, %rax
-       retq
+ 	mov $1, %rcx
+.loop:
+    cmp %rcx, %rdi
+    jge .done
+    mov %rdi, %rax
+    mov %rcx, %rbx
+    call gcd
+    cmp $1, %rax
+    jne .not_prime
+    inc %rcx
+    jmp .loop
+.not_prime:
+    mov $0, %rdi
+    ret
+.done:
+    mov $1, %rdi
+    ret
 
 ############################################################
 ##                end of prime routine                    ##
