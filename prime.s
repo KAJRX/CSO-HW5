@@ -20,6 +20,15 @@ modulo:
 	# TO DO: write this function
 	
 	xorq	%rax, %rax
+ upper:
+ 	cmpq	$0, %rax
+  	jle	zeroCheck
+   	subq	%rsi, %rdi
+    	jmp	upper
+
+     	zeroCheck:
+      	addq	%rsi, %rdi
+       	movq	%rdi, %rax
 	retq
 
 ############################################################
@@ -38,7 +47,21 @@ gcd:
 	# TO DO: write this function
 
 	xorq	%rax, %rax
-	retq
+ 	cmp $0, $rsi
+  	je .foundation
+
+    	begin:
+     	mov %rsi,%rdi
+      	mov %rdi, %rax
+       	call modulo
+	mov %rdi, %rsi
+ 	mov %rdx, %rdi
+  	test %rdx, %rdx
+   	jnz begin
+
+    	.foundation:
+     		mov %rdi, %rax
+       		retq
 
 ############################################################
 ##                 end of gcd routine                     ##
@@ -56,7 +79,26 @@ prime:
 	# TO DO: write this function
 
 	xorq	%rax, %rax
-	retq
+ 	mov $1, %rsi
+
+   	loop:
+    	cmp %rsi, %rdi
+     	je .primeCheck
+      	push %rdi
+       	push %rsi
+	call gcd
+ 	pop %rsi
+  	pop %rdi
+   	inc %rsi
+    	cmp $0x01, %rax
+     	je loop
+
+      	mov $0x00, %rax
+      	retq
+
+       .primCheck:
+       mov $1, %rax
+       retq
 
 ############################################################
 ##                end of prime routine                    ##
