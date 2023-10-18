@@ -22,11 +22,11 @@ modulo:
 	xorq	%rax, %rax
  upper:
  	cmpq	$0, %rax
-  	jle	zeroCheck
+  	jle	zerCheck
    	subq	%rsi, %rdi
     	jmp	upper
 
-     	zeroCheck:
+     	zerCheck:
       	addq	%rsi, %rdi
        	movq	%rdi, %rax
 	retq
@@ -83,7 +83,7 @@ prime:
 
    	loop:
     	cmp %rsi, %rdi
-     	je .primeCheck
+     	je .primCheck
       	push %rdi
        	push %rsi
 	call gcd
